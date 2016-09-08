@@ -1,0 +1,52 @@
+package com.petworld;
+
+import org.springframework.stereotype.Controller;
+
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class PetWorld {
+
+	public PetWorld() {
+		// TODO Auto-generated constructor stub
+		System.out.println("inside store");
+	}
+	@RequestMapping("/")
+	public String homePage() {
+	return "mainpage";
+	}
+	
+	@RequestMapping("/form")
+	public ModelAndView gotoProduct(@ModelAttribute("prod")Product prod)
+	{
+	return new ModelAndView("form");
+	}
+	@RequestMapping(value="addProduct",method=RequestMethod.POST)
+	public ModelAndView saveProduct(@ModelAttribute("prod")Product prod)
+	{
+	dataService.insertRow(prod);
+	return new ModelAndView("form");
+	}
+	@RequestMapping("/list")
+	public ModelAndView listProduct()
+	{
+	List<Product> productList=dataService.getList();
+	return new ModelAndView("list","productList", productList);
+	}
+	@RequestMapping("/mainpage")
+	public String gotohome() {
+	return "mainpage";
+	}
+	@RequestMapping("/signup")
+	public String gotosignup() {
+	return "signup";
+	}
+	@RequestMapping("/login")
+	public String gotologin() {
+	return "login";
+	}
+
+}
