@@ -1,0 +1,9 @@
+package com.petworld.model;
+
+public class CustomerDetails {
+
+	public CustomerDetails() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
