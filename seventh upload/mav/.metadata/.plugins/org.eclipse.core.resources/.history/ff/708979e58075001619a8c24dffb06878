@@ -1,0 +1,9 @@
+package com.petworld.dao;
+
+public class DataDaoImpl {
+
+	public DataDaoImpl() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
