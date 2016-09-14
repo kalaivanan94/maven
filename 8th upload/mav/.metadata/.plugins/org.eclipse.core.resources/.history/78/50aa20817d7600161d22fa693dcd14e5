@@ -1,0 +1,7 @@
+.navbar {
+	min-height: 20px;
+	}
+.navbar-brand 
+{padding:  5px; height: 20px; line-height: 30px;
+}
+

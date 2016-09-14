@@ -1,0 +1,9 @@
+package com.petworld.dao;
+
+public class CategoryDao {
+
+	public CategoryDao() {
+		// TODO Auto-generated constructor stub
+	}
+
+}
